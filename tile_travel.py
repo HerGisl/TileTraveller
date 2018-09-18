@@ -16,90 +16,116 @@ directions = ['(N)orth', '(E)ast', '(S)outh' , '(W)est']
 you_can = 'You can travel: '
 
 while game_over == False:
+    counter = 0
     while current_tile == 1:
-
-        ask_user = input(you_can + directions[0] + '.')
+        if counter == 0:
+            print(you_can + directions[0] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 'n':
-            print('Direction: ' + ask_user)
             current_tile = 2
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 2:
-
-        ask_user = input(you_can + directions[0] + ' or ' + directions[1] + ' or ' + directions[2] + '.')
+        if counter == 0:
+            print(you_can + directions[0] + ' or ' + directions[1] + ' or ' + directions[2] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 'n':
-            print('Direction: ' + ask_user)
             current_tile = 3
+            break
         elif ask_user.lower() == 's':
-            print('Direction: ' + ask_user)
             current_tile = 1
+            break
         elif ask_user.lower() == 'e':
-            print('Direction: ' + ask_user)
             current_tile = 5
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 3:
-
-        ask_user = input(you_can + directions[1] + ' or ' + directions[2] + '.')
+        if counter == 0:
+            print(you_can + directions[1] + ' or ' + directions[2] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 's':
-            print('Direction: ' + ask_user)
             current_tile = 2
+            break
         elif ask_user.lower() == 'e':
-            print('Direction: ' + ask_user)
             current_tile = 6
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 4:
-
-        ask_user = input(you_can + directions[0] + '.')
+        if counter == 0:
+            print(you_can + directions[0] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 'n':
-            print('Direction: ' + ask_user)
             current_tile = 5
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 5:
-
-        ask_user = input(you_can + directions[2] + ' or ' + directions[3] + '.')
+        if counter == 0:
+            print(you_can + directions[2] + ' or ' + directions[3] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 's':
-            print('Direction: ' + ask_user)
             current_tile = 4
+            break
         elif ask_user.lower() == 'w':
-            print('Direction: ' + ask_user)
             current_tile = 2
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 6:
-
-        ask_user = input(you_can + directions[1] + ' or ' + directions[3] + '.')
+        if counter == 0:
+            print(you_can + directions[1] + ' or ' + directions[3] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 'e':
-            print('Direction: ' + ask_user)
             current_tile = 9
+            break
         elif ask_user.lower() == 'w':
-            print('Direction: ' + ask_user)
             current_tile = 3
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 8:
-        print('location ' + str(current_tile))
-        ask_user = input(you_can + directions[0] + ' or ' + directions[2] + '.')
+        if counter == 0:
+            print(you_can + directions[0] + ' or ' + directions[2] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 's':
-            print('Direction: ' + ask_user)
             current_tile = 7
+            break
         elif ask_user.lower() == 'n':
-            print('Direction: ' + ask_user)
             current_tile = 9
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     while current_tile == 9:
-        ask_user = input(you_can + directions[2] + ' or ' + directions[3] + '.')
+        if counter == 0:
+            print(you_can + directions[2] + ' or ' + directions[3] + '.')
+        ask_user = input('Direction: ')
         if ask_user.lower() == 's':
-            print('Direction: ' + ask_user)
             current_tile = 8
+            break
         elif ask_user.lower() == 'w':
-            print('Direction: ' + ask_user)
             current_tile = 6
+            break
         else:
             print(not_valid)
+        counter += 1
+    counter = 0
     if current_tile == 7:
         print('Victory!')
         break
