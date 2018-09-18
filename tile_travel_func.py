@@ -78,3 +78,4 @@ def print_location_options(location_id):
     get_user_input(location_list[location_id][0], location_list[location_id][1])
 
 print_location_options(0)
+#git þekkingaröflun!!!
