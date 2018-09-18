@@ -19,7 +19,7 @@ location_list = [
     ],
     [
         #Tile 1
-        [0,1,2], [0, 4, 2]
+        [0,1,2], [2, 4, 0]
     ],
     [
         #Tile 2
@@ -63,15 +63,21 @@ def direction_options(options):
             
 def get_user_input(options, location_option):
     run_while = True
-    while run_while:
-        user_input = input('Direction: ')
-        if user_input in directions_short and directions_short.index(user_input) in options:
-            print_location_options( )
+    if not options:
+        print('Victory:')
+    else:
+        print(options)
+        while run_while:
+            user_input = input('Direction: ')
+            if user_input in directions_short and directions_short.index(user_input) in options:
+                print('index 1: ' + str(location_option[options.index(directions_short.index(user_input))]))
+                print('index 0: ' + str(options.index(directions_short.index(user_input))))
+                print_location_options(location_option[options.index(directions_short.index(user_input))])
 
-            run_while = False
-        else:
-            print('No!')
-    
+                run_while = False
+            else:
+                print('No!')
+        
 
 
 def print_location_options(location_id):
