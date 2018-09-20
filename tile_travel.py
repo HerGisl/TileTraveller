@@ -3,15 +3,13 @@ Algorithmi fyrir 3x3 grid leik
 Búa til lúppu og harðkóða núverandi staðsettningu og möguleika í hverju skrefi.
 Prufa ef input matchar við möguleika og breyta núverandi staðsettningu miðað við það.
 '''
-# argargarg
+
 
 current_tile = 1
 game_over = False
 not_valid = 'Not a valid direction!'
 
 directions = ['(N)orth', '(E)ast', '(S)outh' , '(W)est']
-
-
 
 you_can = 'You can travel: '
 
