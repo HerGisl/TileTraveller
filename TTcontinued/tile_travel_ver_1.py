@@ -98,6 +98,8 @@ while not victory:
                 row = 1
                 coins = 0
                 victory = False
+            valid_directions = find_directions(col, row)
+            print_directions(valid_directions)
             
         else:
             valid_directions = find_directions(col, row)
