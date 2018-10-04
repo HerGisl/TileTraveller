@@ -91,14 +91,7 @@ while not victory:
 
         if victory:
             print("Victory!")
-            play_again = input("Play again (y/n): ")
-            play_again = play_again.lower()
-            if play_again == "y":
-                col = 1
-                row = 1
-                coins = 0
-                victory = False
-            
+                                    
         else:
             valid_directions = find_directions(col, row)
             print_directions(valid_directions)
