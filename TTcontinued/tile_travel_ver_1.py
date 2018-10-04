@@ -56,17 +56,16 @@ def find_directions(col, row):
 
 def pull_lever(col, row):
     if col == 1 and row == 2 or col == 2 and row == 2 or col == 2 and row == 3 or col == 3 and row == 2:
-        coin = 0 
+        #coin = 0 
         lever_pos = input("Pull a lever (y/n): ")
         lever_pos = lever_pos.lower()
         print(lever_pos)
         if lever_pos == "y":
             print("YES!")
-            coin += 1
+            return True
         else:
             print("NO")
-            
-        return coin
+            return False
 
 
 
@@ -91,7 +90,8 @@ while not victory:
         col, row = move(direction, col, row)
         victory = is_victory(col, row)
         lever = pull_lever(col, row)
-        coins += lever
+        if lever:
+            coins += lever
 
         if victory:
             print("Victory!")
